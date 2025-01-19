@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Test {
+public class test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,7 +19,7 @@ public class Test {
         System.out.println("Your total percentage is: " + percentage + "%");
 
         // Print a 2D array
-        int[3][3] array = {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}};
+        int[][] array = {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}};
 
         System.out.println("2D Array:");
         for (int i = 0; i < array.length; i++) {
