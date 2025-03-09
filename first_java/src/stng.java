@@ -6,7 +6,7 @@ public class stng {
     String b="This string contain only  double   spacess";
     System.out.println(b.indexOf("   "));
     int c=15;
-    boolean cond =(c<18);
+    boolean cond =(c>18);
     if (cond){
       System.out.println("nigga move");
     
