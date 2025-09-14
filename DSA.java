@@ -4,19 +4,18 @@ public class DSA {
         Scanner sc= new Scanner(System.in);
         System.out.print("enter the number of values: ");
         int n=sc.nextInt();
-        int i=0;
-        while(i<10){
-            i++;
-            int sum=i*n;
-        System.out.println(sum+"");  
+        System.out.print("enter the number of columns: ");
+        int m=sc.nextInt();
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=m;j++){
+                if( i==0 || i==n || j==0 || j==m){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
         }
-        
-
-
-
-
-
-
         sc.close();
     }
 }
