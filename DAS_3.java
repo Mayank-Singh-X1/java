@@ -18,7 +18,7 @@ public class DAS_3 {
         for(int i=0;i<arr.length;i++){
         if(key==arr[i]){
             System.out.println("found at index : "+arr[i]);
-        };
+        }
         }
         sc.close();
     }

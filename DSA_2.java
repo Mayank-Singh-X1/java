@@ -1,35 +1,44 @@
 import java.util.*;
 public class DSA_2 {
-
-    public static void  returnCount(int x){
-       int p=0,n=0,z=0;
-        if(x<0){     
-           n++; 
-        }else if(x>0){          
-            p++;
-        }else{         
-            z++;
-        }
-        System.out.println("pos:"+p+" neg:"+n+" zero:"+z);
-    }
-
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
-        
-        boolean Action= true;
-        int x;
-        
-        while(Action){
-            
-            System.out.println("Enter number or type \"quit\" to exit: ");
-            x=sc.nextInt();
-            if(x=="quit"){
-                break;
+        System.out.println("Enter the number of rows");
+        int row=sc.nextInt();
+        System.out.println("Enter the number of columns");
+        int col=sc.nextInt();
+
+        int arr[][]=new int[row][col];
+
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                System.out.println("Enetr the value of "+(i+1)+(j+1));
+                arr[i][j]=sc.nextInt();
             }
-           returnCount(x); 
+        }
+
+        // for(int i=0; i<row; i++){
+        //     for(int j=0; j<col; j++){
+        //        System.out.print(arr[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
+
+        System.out.print("Enter the value you want to search: ");
+        int key=sc.nextInt();
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                if(key==arr[i][j]){
+                     System.out.print("found at index "+(i+1)+(j+1));
+                }
+            }
+
         }
 
 
+
+  
+
+        sc.close();
     }
 }
 
