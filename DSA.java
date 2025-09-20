@@ -5,7 +5,7 @@ public class DSA {
         System.out.print("enter the number of values: ");
         int n=sc.nextInt();
         System.out.print("enter the number of columns: ");
-        int m=sc.nextInt();
+        // int m=sc.nextInt();
 
         //Hollow rectangle
         // for(int i=0;i<=n;i++){
