@@ -1,5 +1,4 @@
 public class Recursion2 {
-
     // public static void towerOfHanoi(int n, String src, String helper, String dest) {
     //     if (n == 1) {
     //         System.out.println("move disk " + n + " from " + src + " to " + dest);
@@ -10,6 +9,7 @@ public class Recursion2 {
     //     towerOfHanoi(n - 1, helper, src, dest);
     // }
 
+
     // public static void reverse(String str,int index){
     //     if(index ==0){
     //         System.out.print(str.charAt(index));
@@ -18,24 +18,41 @@ public class Recursion2 {
     //     System.out.print(str.charAt(index));
     //     reverse(str, index-1);
     // }
-    public static int first=-1;
-    public static int last=-1;
-    public static void findchar(String str,char key,int index){
-        if(index==str.length()){
-            System.out.println("First occurrence: " + first);
-            System.out.println("Last occurrence: " + last);
-            return;
+
+
+    //find first and last occurrence of character
+    // public static int first=-1;
+    // public static int last=-1;
+    // public static void findchar(String str,char key,int index){
+    //     if(index==str.length()){
+    //         System.out.println("First occurrence: " + first);
+    //         System.out.println("Last occurrence: " + last);
+    //         return;
+    //     }
+    //     char currentChar=str.charAt(index);
+    //     if(currentChar==key){
+    //         if(first==-1){
+    //             first=index;
+    //         }else{
+    //             last=index;
+    //         }
+    //     }
+    //     findchar(str, key, index + 1);  // Changed index++ to index + 1
+    // }
+
+
+    //check whether array is strictly increasing or not
+    public static boolean Strictinc(int[] arr, int index){
+        if(index == arr.length-1){
+            return true;
         }
-        char currentChar=str.charAt(index);
-        if(currentChar==key){
-            if(first==-1){
-                first=index;
-            }else{
-                last=index;
-            }
+        if(arr[index] < arr[index+1]){
+            return Strictinc(arr, index+1);
+        }else{
+            return false;
         }
-        findchar(str, key, index + 1);  // Changed index++ to index + 1
     }
+
 
     public static void main(String[] args) {
 
@@ -48,9 +65,13 @@ public class Recursion2 {
         // reverse(a,a.length()-1);
 
         //Find first and last index of character
-        String a="Sanat Clausahk";
-        findchar(a, 'a', 0);
-   
+        // String a="Sanat Clausahk";
+        // findchar(a, 'a', 0);
+
+        //check whether array is strictly increasing or not
+        int arr[]={1,2,3,4,5};
+        boolean isStrictlyIncreasing = Strictinc(arr, 0);
+        System.out.println("Is array strictly increasing? " + isStrictlyIncreasing);
     }
 
 }
