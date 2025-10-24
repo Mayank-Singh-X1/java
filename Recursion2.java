@@ -52,22 +52,40 @@ public class Recursion2 {
     // }
 
     // Move a given cahracter to end of string
-    public static void moveallX(String str, int idx, int count, String newstr) {
-        if (idx == str.length()) {
-            for (int i = 0; i <= count; i++) {
-                newstr += 'x';
-            }
-            System.out.println(newstr);
+    // public static void moveallX(String str, int idx, int count, String newstr) {
+    //     if (idx == str.length()) {
+    //         for (int i = 0; i <= count; i++) {
+    //             newstr += 'x';
+    //         }
+    //         System.out.println(newstr);
+    //         return;
+    //     }
+    //     char currentChar = str.charAt(idx);
+    //     if (currentChar == 'x') {
+    //         count++;
+    //         moveallX(str, idx + 1, count, newstr);
+    //     } else {
+    //         newstr += currentChar;
+    //         moveallX(str, idx + 1, count, newstr);
+    //     }
+    // }
+
+    // Move a given number to end of array without creating another variable 100203
+    public static void moveZeroes(int[] nums) {       
+        if (nums == null || nums.length < 2) {
             return;
         }
-
-        char currentChar = str.charAt(idx);
-        if (currentChar == 'x') {
-            count++;
-            moveallX(str, idx + 1, count, newstr);
-        } else {
-            newstr += currentChar;
-            moveallX(str, idx + 1, count, newstr);
+        int left = 0;
+        for (int right = 0; right < nums.length; right++) {
+            if (nums[right] != 0) { 
+                int temp = nums[right];
+                nums[right] = nums[left];
+                nums[left] = temp;
+                left++;
+            }
+        }
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i]+" ");
         }
     }
 
@@ -91,8 +109,12 @@ public class Recursion2 {
         // System.out.println("Is array strictly increasing? " + isStrictlyIncreasing);
 
         // Move a given cahracter to end of string
-        String str = "axbxxcd";
-        moveallX(str, 0, 0, "");
+        // String str = "axbxxcd";
+        // moveallX(str, 0, 0, "");
+
+        // Move a given number to end of array without creating another variable
+        int []num={0,1,2,0,0,3};
+        moveZeroes(num);
     }
 
 }
