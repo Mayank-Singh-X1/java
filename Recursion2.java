@@ -70,7 +70,7 @@ public class Recursion2 {
     //     }
     // }
 
-    // Move a given number to end of array without creating another variable 100203
+    // Move a given number to end of array without creating another variable
     // public static void moveZeroes(int[] nums) {       
     //     if (nums == null || nums.length < 2) {
     //         return;
@@ -86,6 +86,23 @@ public class Recursion2 {
     //     }
     //     for(int i=0;i<nums.length;i++){
     //         System.out.print(nums[i]+" ");
+    //     }
+    // }
+
+    //remove Duplicates from given string
+    // public static boolean[] map =new boolean[26];
+    // public static void removeDuplicate(String str, int idx, String newstr){
+    //     if(idx==str.length()){
+    //         System.out.println(newstr);
+    //         return;
+    //     }
+    //     char currentchar=str.charAt(idx);
+    //     if(map[currentchar-'a']){
+    //         removeDuplicate(str, idx+1, newstr);
+    //     }else{
+    //         newstr+=currentchar;
+    //         map[currentchar-'a']=true;
+    //         removeDuplicate(str, idx+1, newstr);
     //     }
     // }
 
@@ -115,6 +132,11 @@ public class Recursion2 {
         // Move a given number to end of array without creating another variable
         // int []num={0,1,2,0,0,3};
         // moveZeroes(num);
+
+        //remove Duplicates from given string
+        // String s="abbcdda";
+        // removeDuplicate(s, 0, "");
+
       
     }
 
