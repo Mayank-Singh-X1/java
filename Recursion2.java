@@ -70,7 +70,7 @@ public class Recursion2 {
     //     }
     // }
 
-    // Move a given number to end of array without creating another variable
+    // Move a given number to end of array without creating another variable (left right pointer method)
     // public static void moveZeroes(int[] nums) {       
     //     if (nums == null || nums.length < 2) {
     //         return;
@@ -106,6 +106,33 @@ public class Recursion2 {
     //     }
     // }
 
+    //print all subsequences of String
+    // public static void Subsequence(String str, int idx, String newstr){
+    //     if(str.length()==idx){
+    //         System.out.println(newstr);
+    //         return;
+    //     }
+    //     char currchar=str.charAt(idx);
+    //     Subsequence(str, idx+1, newstr+currchar); // want to be added in string
+    //     Subsequence(str, idx+1, newstr);// don't want to be added in string
+    // } 
+
+    //print possible combinations of keypad mobile
+    public static String [] keypad={".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+
+    public static void Combination(String str, int idx, String combo){
+        if(str.length()==idx){
+            System.out.println(combo);
+            return;
+
+        }
+        char currchar=str.charAt(idx);
+        String mapping=keypad[currchar-'0'];
+        for(int i=0;i<mapping.length();i++){
+            Combination(str, idx+1, combo+mapping.charAt(i));
+        }
+    }
+
     public static void main(String[] args) {
 
         // Tower Of Hanoi
@@ -136,6 +163,14 @@ public class Recursion2 {
         //remove Duplicates from given string
         // String s="abbcdda";
         // removeDuplicate(s, 0, "");
+
+        //print all subsequences of String
+        // String a="abcd";
+        // Subsequence(a, 0, "");
+
+        //print possible combinations of keypad mobile
+        String a="101";
+        Combination(a, 0, "");
 
       
     }
