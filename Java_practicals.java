@@ -24,6 +24,21 @@ public class Java_practicals {
     //     return true;
     // }
 
+    //palindrome
+    // public static boolean palindrome(String str){
+    //     int f=0;
+    //     int l=str.length()-1;
+    //     while(l>f){
+    //     if(str.charAt(f)!=str.charAt(l)){
+    //         return false;
+    //     }else{
+    //     f++;
+    //     l--;
+    //     }
+    // }
+    //     return true;
+    // }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // 6
@@ -78,6 +93,13 @@ public class Java_practicals {
         //         System.out.print(res[i][j]+" ");
         //     }
         //     System.out.println();
+        // }
+
+        // String m="madam";
+        // if(palindrome(m)){
+        //     System.out.println("palindrome");
+        // }else{
+        //     System.out.println("not palindrome");
         // }
 
         sc.close();
