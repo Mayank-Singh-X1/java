@@ -121,7 +121,21 @@ public class Java_practicals {
         //     System.out.println("no real roots");
         // }
 
+    
+Scanner scanner = new Scanner(System.in); 
+int n = scanner.nextInt(); 
+scanner.nextLine(); 
+String[] names = new String[n]; 
+for (int i = 0; i < n; i++) { 
+names[i] = scanner.nextLine(); 
+} 
+Arrays.sort(names);
+for(String i : names){
+    System.out.println(i);
+    
+}
 
-        sc.close();
+
+       
     }
 }
