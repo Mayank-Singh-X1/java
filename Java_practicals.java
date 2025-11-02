@@ -40,7 +40,7 @@ public class Java_practicals {
     // }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
         // 6
         // int n= 5;
         // System.out.println("1\n2");
@@ -101,6 +101,26 @@ public class Java_practicals {
         // }else{
         //     System.out.println("not palindrome");
         // }
+
+        //find roots of quadratic equation
+        // Scanner sc = new Scanner (System.in);
+        // System.out.println("Enter a,b and c values: ");
+        // double a=sc.nextDouble();
+        // double b=sc.nextDouble();
+        // double c=sc.nextDouble();
+
+        // double D=b*b-4*a*c;
+        // if(D>0){
+        //     double x1=(-b-Math.sqrt(D))/(2*a);
+        //     double x2=(-b+Math.sqrt(D))/(2*a);
+        //     System.out.printf("two roots %.2f and %.2f",x1,x2);
+        // }else if(D==0){
+        //     double x1=-b/(2*a);
+        //     System.out.printf("one real root %.2f",x1);
+        // }else{
+        //     System.out.println("no real roots");
+        // }
+
 
         sc.close();
     }
