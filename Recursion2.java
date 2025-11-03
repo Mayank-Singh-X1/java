@@ -124,7 +124,6 @@ public class Recursion2 {
         if(str.length()==idx){
             System.out.println(combo);
             return;
-
         }
         char currchar=str.charAt(idx);
         String mapping=keypad[currchar-'0'];
