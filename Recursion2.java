@@ -169,9 +169,7 @@ public class Recursion2 {
 
         //print possible combinations of keypad mobile
         String a="101";
-        Combination(a, 0, "");
-
-      
+        Combination(a, 0, "");     
     }
 
 }
